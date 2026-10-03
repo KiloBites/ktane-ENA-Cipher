@@ -1242,10 +1242,10 @@ public class enaCipherScript : MonoBehaviour {
             window.SetActive(true);
             yield return new WaitForSeconds(1);
             isActivated = true;
-			for (int i = 0; i < 5; i++)
-			{
-
-			}
+            for (int i = 0; i < 5; i++)
+            {
+	            patternFlashes[i] = StartCoroutine(flashSeq(i, flashSeqGeneration[i], i == 2));
+            }
             yield break;
         }
 
@@ -1278,7 +1278,17 @@ public class enaCipherScript : MonoBehaviour {
 			yield return new WaitForSeconds(0.1f);
         }
 		submit.OnInteract();
-	}
+		yield return new WaitForSeconds(0.1f);
+
+		if (split[1] == word)
+		{
+			yield return "solve";
+		}
+		else
+		{
+			yield return "strike";
+		}
+    }
 
 	IEnumerator TwitchHandleForcedSolve()
     {
@@ -1311,8 +1321,6 @@ public class enaCipherScript : MonoBehaviour {
 		{
 			yield return true;
 		}
-
-		yield return null;
     }
 
 

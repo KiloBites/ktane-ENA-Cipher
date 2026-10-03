@@ -12659,7 +12659,7 @@ MonoBehaviour:
   - {fileID: 102950817966335270}
   - {fileID: 102225609654680892}
   specialSolveOut: {fileID: 328480174675612456}
-  specialClip: {fileID: 32900000, guid: 40f128c794fab3846a79fe0012309010, type: 3}
+  specialClip: {fileID: 32900000, guid: 303f5f39d933a4a9eb382e1958f69d6d, type: 3}
   abyssObj:
   - {fileID: 1265431019771940}
   - {fileID: 1147692346385368}
